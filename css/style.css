@@ -1,0 +1,241 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-one);
+}
+
+  :root{
+    --color-one: rgb(32, 31, 27);
+    --color-two: #efbc01;
+  }
+  
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+  }
+  
+  p {
+    margin: 0;
+  }
+  /* Nav bar  */
+  .navbar{
+    background-color: var(--color-one) !important;
+  }
+.container-fluid{
+  background-color:var(--color-one);
+  padding: 5px;
+}
+
+.navbar-brand{
+    background: var(--color-two);
+    margin-left: -10px;
+    padding: 10px 10px 10px 60px;
+    font-size: 25px;
+    border-radius: 0px 20px 20px 0px ;
+    
+}
+
+.nav-link{
+  color: var(--color-two);
+  text-decoration: underline;
+}
+
+.navbar-toggler-icon{
+  background-color: var(--color-two); 
+}
+
+/* Hero Banner */
+
+.jumbotron{
+  height: 300px;
+  background: url(/images/yellow-lines-black-background_910608-4848.avif);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.display-4{
+  color: var(--color-two);
+
+}
+
+.card-img-top{
+   border: var(--color-two) solid ; 
+}
+
+/* left  */
+.columns{
+  color: var(--color-two);
+  border-right: var(--color-two) solid 5px;
+  margin-top: 2%;
+  
+}
+
+.text-nav{
+  margin-bottom: 10rem;
+  margin-left: 40px;
+  
+  
+}
+
+.text-nav h2{
+  font-size: 40px;
+  margin-left: 0%;
+}
+
+.text-center{
+ position: absolute;
+  top: 60%;
+  left: 28%;
+   
+
+}
+
+/* Grid  */
+
+#pagegrid { 
+  display: grid;
+  grid-template-rows: 300px 300px ;
+  grid-template-columns: 300px 300px 300px;
+  grid-template-areas: 
+  "hori hori hori"
+  "worktwo workone work"
+  ;
+}
+
+
+#workone{
+  grid-area: workone;
+  background-image: url(../images/imagehtml.webp);
+}
+
+#worktwo{
+  grid-area: worktwo;
+  background-image: url(../images/imagecss.png);
+  
+}
+
+#horiseonweb{
+grid-area: hori;
+background-image: url(../images/horiseonweb.png);
+}
+
+#workthree{
+  grid-area: work;
+  background-image: url(../images/Unofficial_JavaScript_logo_2.svg.png);
+}
+
+.gridareaCategory{
+  display: flex;
+  position: relative;
+  left: 510px;
+  top: -70%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  flex-wrap: wrap;
+  align-content: center;
+  flex-direction: column;
+  justify-content: flex-end;
+  border: var(--color-two) 10px solid;
+  margin:  10px;
+}
+
+
+.heading{
+  color: var(--color-two);
+  background-color: rgb(32, 31, 27,0.8);
+  font-size: 40px;
+
+}
+
+.heading a {
+color: var(--color-two);
+text-decoration: none;
+}
+
+/* Contact me section */
+.info{
+  position: absolute;
+  top: 195%;
+  left: 380px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-decoration: underline 2px;
+  color: var(--color-two);
+}
+
+ .info a{
+  padding:10px 80px 10px 60px ;
+  color: var(--color-two);
+  font-size: 20px;
+  border: var(--color-two) solid 10px;
+  margin: 10px;
+  margin-bottom: 40px;
+
+} 
+
+/* hover in the footer */
+
+.info a {
+  box-shadow: inset 0 0 0 0 var(--color-two);
+  color: var(--color-two);
+  
+  transition: color 1s ease-in-out, box-shadow 1s ease-in-out;
+}
+.info a:hover {
+  box-shadow: inset 400px 0 0 0 var(--color-one);
+  color: var(--color-two);
+}
+/* Media Queries functions */
+  
+
+@media  screen and (min-width: 1600px) {
+  .text-center{
+    position: absolute;
+    top: 45% ;
+    width:64% ;
+  }
+
+  .gridareaCategory{
+    position: relative;
+    top: -70%;
+    left: 700px;
+    
+  }
+  .info{
+    position: absolute;
+    top: 148%;
+    left: 620px;
+  }
+}
+
+@media  screen and (max-width: 1300px) {
+  .text-center{
+    position: absolute;
+    top: px; 
+    width: 60%;
+  }
+  
+}
+
+@media  screen and (max-width: 700px) {
+  .text-center{
+    position: absolute;
+    top:60% ;
+    width: 60%;
+    
+  }
+  .columns{
+    border: none ;
+}
+
+}
